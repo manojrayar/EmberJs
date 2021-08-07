@@ -6,10 +6,11 @@
       About
   </LinkTo>
 </Jumbo>
+<h1>{{@model.title}}</h1>
 <div class="rentals">
   <ul class="results">
-    <li><Blog /></li>
-    <li><Blog /></li>
-    <li><Blog /></li>
+    {{#each @model as |rental|}}
+      <li><Blog @blog={{rental}} /></li>
+    {{/each}}
   </ul>
 </div>

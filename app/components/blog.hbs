@@ -1,23 +1,23 @@
 <article class="rental">
-    <Blog::Image src="https://images.freeimages.com/images/large-previews/b0b/american-flag-1547938.jpg" alt="American Flag" />
+    <Blog::Image src={{@blog.image}} alt="American Flag" />
   <div class="details">
-    <h3>Grand Old Mansion</h3>
+    <h3> {{@blog.title}} </h3>
     <div class="detail owner">
-      <span>Owner:</span> Veruca Salt
+      <span>Owner:</span> {{@blog.owner}}
     </div>
     <div class="detail type">
-      <span>Type:</span> Standalone
+      <span>Type:</span> {{@blog.type}}
     </div>
     <div class="detail location">
-      <span>Location:</span> San Francisco
+      <span>Location:</span> {{@blog.city}}
     </div>
     <div class="detail bedrooms">
-      <span>Number of bedrooms:</span> 15
+      <span>Number of bedrooms:</span> {{@blog.bedrooms}}
     </div>
   </div>
    <Map
-    @lat="37.7749"
-    @lng="-122.4194"
+    @lat={{@blog.location.lat}}
+    @lng={{@blog.location.lng}}
     @zoom="9"
     @width="150"
     @height="150"
